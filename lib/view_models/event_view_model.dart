@@ -18,7 +18,12 @@ class EventViewModel extends ChangeNotifier {
   }
 
   List<Event> filteredEvents(String query) {
-    return _events;
+    if (query.isEmpty) return _events;
+    List<Event> filtered = _events
+        .where(
+            (event) => event.name.toLowerCase().contains(query.toLowerCase()))
+        .toList();
+    return filtered;
   }
 
   void toggleFavorite(Event event) async {
