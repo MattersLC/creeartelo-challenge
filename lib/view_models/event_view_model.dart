@@ -27,12 +27,12 @@ class EventViewModel extends ChangeNotifier {
   }
 
   void toggleFavorite(Event event) async {
+    event.isFavorite = !event.isFavorite;
     if (event.isFavorite) {
       await _service.saveFavorite(event);
     } else {
       await _service.deleteFavorite(event.id);
     }
-    event.isFavorite = !event.isFavorite;
     notifyListeners();
   }
 

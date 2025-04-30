@@ -68,9 +68,7 @@ class EventCard extends StatelessWidget {
                     event.isFavorite ? Icons.favorite : Icons.favorite_border,
                     color: Colors.redAccent,
                   ),
-                  onPressed: () {
-                    viewModel.toggleFavorite(event);
-                  },
+                  onPressed: () => viewModel.toggleFavorite(event),
                 ),
               ],
             ),

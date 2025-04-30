@@ -37,11 +37,10 @@ class Event {
       'id': id,
       'name': name,
       'date': date.toIso8601String(),
-      'lat': lat,
-      'long': long,
+      'lat': lat.toString(),
+      'long': long.toString(),
       'urlImage': urlImage,
       'category': category,
-      'isFavorite': isFavorite,
     };
   }
 

@@ -36,12 +36,12 @@ class Eventservice {
   }
 
   Future<bool> saveFavorite(Event event) async {
-    final result = DatabaseHelper.instance.saveFavorite(event);
+    final result = await DatabaseHelper.instance.saveFavorite(event);
     return result;
   }
 
   Future<bool> deleteFavorite(int id) async {
-    final result = DatabaseHelper.instance.deleteFavorite(id);
+    final result = await DatabaseHelper.instance.deleteFavorite(id);
     return result;
   }
 }
