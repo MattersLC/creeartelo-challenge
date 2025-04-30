@@ -1,8 +1,8 @@
 import 'package:creeartelo_challenge/models/event.dart';
-import 'package:creeartelo_challenge/services/EventService.dart';
+import 'package:creeartelo_challenge/services/event_service.dart';
 import 'package:flutter/material.dart';
 
-class Eventviewmodel extends ChangeNotifier {
+class EventViewModel extends ChangeNotifier {
   final Eventservice _service = Eventservice();
   List<Event> _events = [];
   List<Event> get events => _events;
@@ -12,8 +12,23 @@ class Eventviewmodel extends ChangeNotifier {
     notifyListeners();
   }
 
+  Future<void> fetchFavoritesEvents() async {
+    _events = await _service.getFavoriteEvents();
+    notifyListeners();
+  }
+
   List<Event> filteredEvents(String query) {
     return _events;
+  }
+
+  void toggleFavorite(Event event) async {
+    if (event.isFavorite) {
+      await _service.saveFavorite(event);
+    } else {
+      await _service.deleteFavorite(event.id);
+    }
+    event.isFavorite = !event.isFavorite;
+    notifyListeners();
   }
 
   void searchEvents(String query) {

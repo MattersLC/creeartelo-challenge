@@ -18,7 +18,7 @@ class DatabaseHelper {
     final dbPath = await getDatabasesPath();
     final path = join(dbPath, filePath);
 
-    return await openDatabase(path, version: 1, onCreate: _createDB);
+    return await openDatabase(path, version: 2, onCreate: _createDB);
   }
 
   Future _createDB(Database db, int version) async {
@@ -29,7 +29,8 @@ class DatabaseHelper {
         date TEXT NOT NULL,
         lat REAL NOT NULL,
         long REAL NOT NULL,
-        urlImage TEXT NOT NULL
+        urlImage TEXT NOT NULL,
+        category TEXT NOT NULL
       )
     ''');
   }
@@ -41,12 +42,38 @@ class DatabaseHelper {
     return result.map((e) => Event.fromMap(e)).toList();
   }
 
-  Future<void> insertEvent(Event event) async {
+  Future<bool> saveFavorite(Event event) async {
     final db = await instance.database;
-    await db.insert(
-      'events',
-      event.toMap(),
-      conflictAlgorithm: ConflictAlgorithm.replace,
-    );
+    try {
+      await db.insert(
+        'events',
+        event.toMap(),
+        conflictAlgorithm: ConflictAlgorithm.replace,
+      );
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  Future<bool> deleteFavorite(int id) async {
+    final db = await instance.database;
+    try {
+      await db.delete(
+        'events',
+        where: 'id = ?',
+        whereArgs: [id],
+      );
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  Future<List<int>> getFavoriteEventIds() async {
+    final db = await instance.database;
+    final List<Map<String, dynamic>> results =
+        await db.query('events', columns: ['id']);
+    return results.map((row) => row['id'] as int).toList();
   }
 }

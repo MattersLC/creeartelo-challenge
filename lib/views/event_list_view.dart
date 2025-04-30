@@ -1,4 +1,5 @@
-import 'package:creeartelo_challenge/view_models/EventViewModel.dart';
+import 'package:creeartelo_challenge/view_models/event_view_model.dart';
+import 'package:creeartelo_challenge/widgets/event_card.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -7,11 +8,11 @@ class EventListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final viewModel = Provider.of<Eventviewmodel>(context);
+    final viewModel = Provider.of<EventViewModel>(context);
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Eventos'),
+        title: const Text('Eventos App'),
         actions: [
           IconButton(
             icon: const Icon(Icons.search),
@@ -24,12 +25,19 @@ class EventListView extends StatelessWidget {
           ),
         ],
       ),
+      body: ListView.builder(
+        itemCount: viewModel.events.length,
+        itemBuilder: (context, index) {
+          final event = viewModel.events[index];
+          return EventCard(event: event);
+        },
+      ),
     );
   }
 }
 
 class EventSearchDelegate extends SearchDelegate {
-  final Eventviewmodel viewModel;
+  final EventViewModel viewModel;
 
   EventSearchDelegate(this.viewModel);
 

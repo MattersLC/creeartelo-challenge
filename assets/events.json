@@ -1,0 +1,223 @@
+[
+    {
+      "id": 1,
+      "name": "Flutter Ninjas 2025",
+      "description": "Join developers to learn about Flutter in Tokyo.",
+      "date": "2025-05-29T12:00:00Z",
+      "lat": 35.68304482207878,
+      "long": 139.7707047173985,
+      "urlImage": "https://i.ytimg.com/vi/gu9z_N89Qqg/maxresdefault.jpg",
+      "isFavorite": false,
+      "category": "conference"
+    },
+    {
+      "id": 2,
+      "name": "Flutter & Friends",
+      "description": "The Friendly Flutter Conference in Stockholm, Sweden",
+      "date": "2025-08-31T17:00:00Z",
+      "lat": 59.33074664574679,
+      "long": 18.063486896880296,
+      "urlImage": "https://i.ytimg.com/vi/yx6B_nOVByw/maxresdefault.jpg",
+      "isFavorite": false,
+      "category": "conference"
+    },
+    {
+      "id": 3,
+      "name": "The Rolling Code Tour",
+      "description": "Live coding and live music – the perfect combo in Austin.",
+      "date": "2025-06-12T20:00:00Z",
+      "lat": 30.2672,
+      "long": -97.7431,
+      "urlImage": "https://source.unsplash.com/random/800x600?concert",
+      "isFavorite": false,
+      "category": "concert"
+    },
+    {
+      "id": 4,
+      "name": "Tech Horizons Expo",
+      "description": "Discover the future of technology and design.",
+      "date": "2025-09-18T10:00:00Z",
+      "lat": 37.7749,
+      "long": -122.4194,
+      "urlImage": "https://source.unsplash.com/random/800x600?expo",
+      "isFavorite": false,
+      "category": "exposition"
+    },
+    {
+      "id": 5,
+      "name": "Art in Motion",
+      "description": "Contemporary art exhibition with immersive experiences.",
+      "date": "2025-07-04T14:00:00Z",
+      "lat": 48.8566,
+      "long": 2.3522,
+      "urlImage": "https://source.unsplash.com/random/800x600?art-exhibition",
+      "isFavorite": false,
+      "category": "exposition"
+    },
+    {
+      "id": 6,
+      "name": "Code Unplugged",
+      "description": "Outdoor coding workshop with music and networking.",
+      "date": "2025-05-19T16:00:00Z",
+      "lat": 45.4215,
+      "long": -75.6972,
+      "urlImage": "https://source.unsplash.com/random/800x600?developer",
+      "isFavorite": false,
+      "category": "meetup"
+    },
+    {
+      "id": 7,
+      "name": "DevOps Summer Meetup",
+      "description": "Informal talks and food trucks for DevOps lovers.",
+      "date": "2025-08-07T18:30:00Z",
+      "lat": 52.52,
+      "long": 13.405,
+      "urlImage": "https://source.unsplash.com/random/800x600?tech-meetup",
+      "isFavorite": false,
+      "category": "meetup"
+    },
+    {
+      "id": 8,
+      "name": "Synthwave Festival",
+      "description": "An electronic music event with retro vibes.",
+      "date": "2025-06-28T21:00:00Z",
+      "lat": 34.0522,
+      "long": -118.2437,
+      "urlImage": "https://source.unsplash.com/random/800x600?synthwave",
+      "isFavorite": false,
+      "category": "concert"
+    },
+    {
+      "id": 9,
+      "name": "Game Dev Expo",
+      "description": "Showcasing indie games and VR experiences.",
+      "date": "2025-10-01T11:00:00Z",
+      "lat": 41.8781,
+      "long": -87.6298,
+      "urlImage": "https://source.unsplash.com/random/800x600?gaming",
+      "isFavorite": false,
+      "category": "exposition"
+    },
+    {
+      "id": 10,
+      "name": "Dart & Chill",
+      "description": "A relaxing Dart workshop by the beach.",
+      "date": "2025-07-22T15:00:00Z",
+      "lat": 36.7783,
+      "long": -119.4179,
+      "urlImage": "https://source.unsplash.com/random/800x600?beach",
+      "isFavorite": false,
+      "category": "meetup"
+    },
+    {
+      "id": 11,
+      "name": "SpaceXperience Expo",
+      "description": "Space tech demos and interactive exhibits.",
+      "date": "2025-11-03T09:00:00Z",
+      "lat": 28.3852,
+      "long": -81.5639,
+      "urlImage": "https://source.unsplash.com/random/800x600?space",
+      "isFavorite": false,
+      "category": "exposition"
+    },
+    {
+      "id": 12,
+      "name": "JavaJam",
+      "description": "Java developers meet for code and coffee.",
+      "date": "2025-06-15T10:00:00Z",
+      "lat": 40.7128,
+      "long": -74.0060,
+      "urlImage": "https://source.unsplash.com/random/800x600?coffee",
+      "isFavorite": false,
+      "category": "meetup"
+    },
+    {
+      "id": 13,
+      "name": "Midnight Flutter Hack",
+      "description": "Overnight Flutter hackathon with prizes and swag.",
+      "date": "2025-09-09T22:00:00Z",
+      "lat": 19.4326,
+      "long": -99.1332,
+      "urlImage": "https://source.unsplash.com/random/800x600?hackathon",
+      "isFavorite": false,
+      "category": "conference"
+    },
+    {
+      "id": 14,
+      "name": "Startup Spotlight",
+      "description": "Pitch your Flutter startup to global investors.",
+      "date": "2025-08-14T17:00:00Z",
+      "lat": 51.5074,
+      "long": -0.1278,
+      "urlImage": "https://source.unsplash.com/random/800x600?startup",
+      "isFavorite": false,
+      "category": "conference"
+    },
+    {
+      "id": 15,
+      "name": "Neon Nights DJ Fest",
+      "description": "Dance to beats under glowing lights.",
+      "date": "2025-06-30T20:00:00Z",
+      "lat": -33.8688,
+      "long": 151.2093,
+      "urlImage": "https://source.unsplash.com/random/800x600?dj",
+      "isFavorite": false,
+      "category": "concert"
+    },
+    {
+      "id": 16,
+      "name": "EcoCode Conference",
+      "description": "Sustainable coding practices and green tech.",
+      "date": "2025-09-22T09:30:00Z",
+      "lat": 55.7558,
+      "long": 37.6173,
+      "urlImage": "https://source.unsplash.com/random/800x600?eco",
+      "isFavorite": false,
+      "category": "conference"
+    },
+    {
+      "id": 17,
+      "name": "UX Design Fest",
+      "description": "A deep dive into modern UX trends and tools.",
+      "date": "2025-10-10T10:00:00Z",
+      "lat": 60.1695,
+      "long": 24.9354,
+      "urlImage": "https://source.unsplash.com/random/800x600?ux",
+      "isFavorite": false,
+      "category": "exposition"
+    },
+    {
+      "id": 18,
+      "name": "React Native Reunion",
+      "description": "Cross-platform developers unite!",
+      "date": "2025-11-17T13:00:00Z",
+      "lat": 13.7563,
+      "long": 100.5018,
+      "urlImage": "https://source.unsplash.com/random/800x600?developer-meeting",
+      "isFavorite": false,
+      "category": "conference"
+    },
+    {
+      "id": 19,
+      "name": "Skyline Beats",
+      "description": "A rooftop concert experience above the city lights.",
+      "date": "2025-07-16T19:00:00Z",
+      "lat": 35.6762,
+      "long": 139.6503,
+      "urlImage": "https://source.unsplash.com/random/800x600?rooftop-party",
+      "isFavorite": false,
+      "category": "concert"
+    },
+    {
+      "id": 20,
+      "name": "Pixel Art Parade",
+      "description": "Explore retro games and pixel art exhibitions.",
+      "date": "2025-08-11T11:00:00Z",
+      "lat": 50.1109,
+      "long": 8.6821,
+      "urlImage": "https://source.unsplash.com/random/800x600?pixel-art",
+      "isFavorite": false,
+      "category": "exposition"
+    }
+  ]
+  

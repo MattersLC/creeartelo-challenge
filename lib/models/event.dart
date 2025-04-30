@@ -1,10 +1,12 @@
 class Event {
-  final String id;
+  final int id;
   final String name;
   final DateTime date;
   final double lat;
   final double long;
   final String urlImage;
+  final String category;
+  bool isFavorite;
 
   Event({
     required this.id,
@@ -13,16 +15,20 @@ class Event {
     required this.lat,
     required this.long,
     required this.urlImage,
+    required this.category,
+    required this.isFavorite,
   });
 
   factory Event.fromMap(Map<String, dynamic> map) {
     return Event(
-      id: map['id'] as String,
+      id: map['id'] as int,
       name: map['name'] as String,
       date: DateTime.parse(map['date'] as String),
       lat: map['lat'] as double,
       long: map['long'] as double,
       urlImage: map['urlImage'] as String,
+      category: map['category'] as String,
+      isFavorite: map['isFavorite'] as bool? ?? false,
     );
   }
 
@@ -34,16 +40,19 @@ class Event {
       'lat': lat,
       'long': long,
       'urlImage': urlImage,
+      'category': category,
+      'isFavorite': isFavorite,
     };
   }
 
   Event copyWith({
-    String? id,
+    int? id,
     String? name,
     DateTime? date,
     double? lat,
     double? long,
     String? urlImage,
+    String? category,
   }) {
     return Event(
       id: id ?? this.id,
@@ -52,6 +61,8 @@ class Event {
       lat: lat ?? this.lat,
       long: long ?? this.long,
       urlImage: urlImage ?? this.urlImage,
+      category: category ?? this.category,
+      isFavorite: isFavorite,
     );
   }
 }

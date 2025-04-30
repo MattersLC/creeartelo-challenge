@@ -1,5 +1,7 @@
+import 'package:creeartelo_challenge/view_models/event_view_model.dart';
 import 'package:creeartelo_challenge/views/event_list_view.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,13 +13,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Creeartelo Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+    return ChangeNotifierProvider(
+      create: (_) => EventViewModel()..fetchEvents(),
+      child: MaterialApp(
+        title: 'Creeartelo Demo',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        home: EventListView(),
       ),
-      home: EventListView(),
     );
   }
 }
