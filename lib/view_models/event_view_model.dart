@@ -12,9 +12,8 @@ class EventViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  Future<void> fetchFavoritesEvents() async {
-    _events = await _service.getFavoriteEvents();
-    notifyListeners();
+  Future<List<Event>> fetchFavoritesEvents() async {
+    return await _service.getFavoriteEvents();
   }
 
   List<Event> filteredEvents(String query) {

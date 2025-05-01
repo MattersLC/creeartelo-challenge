@@ -16,12 +16,13 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (_) => EventViewModel()..fetchEvents(),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Creeartelo Demo',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: EventListView(),
+        home: const EventListView(),
       ),
     );
   }

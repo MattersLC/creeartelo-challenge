@@ -6,9 +6,12 @@ import 'package:flutter/services.dart';
 
 class Eventservice {
   Future<List<Event>> getFavoriteEvents() async {
-    final result = DatabaseHelper.instance.getEvents();
+    final result = await DatabaseHelper.instance.getEvents();
 
-    return result;
+    return result.map((event) {
+      event.isFavorite = true;
+      return event;
+    }).toList();
   }
 
   /*Future<List<Event>> getEvents() async {

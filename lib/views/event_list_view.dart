@@ -1,4 +1,5 @@
 import 'package:creeartelo_challenge/view_models/event_view_model.dart';
+import 'package:creeartelo_challenge/views/favorites_list_view.dart';
 import 'package:creeartelo_challenge/widgets/event_card.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -14,6 +15,15 @@ class EventListView extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Eventos App'),
         actions: [
+          IconButton(
+            icon: const Icon(Icons.favorite),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const FavoritesListView()),
+              );
+            },
+          ),
           IconButton(
             icon: const Icon(Icons.search),
             onPressed: () {
