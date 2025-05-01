@@ -1,3 +1,4 @@
+import 'package:creeartelo_challenge/global/event_colors.dart';
 import 'package:creeartelo_challenge/models/event.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -31,7 +32,9 @@ class _FavoritesListViewState extends State<FavoritesListView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: EventColors.roseWhite,
       appBar: AppBar(
+        backgroundColor: EventColors.roseWhite,
         title: const Text('Favoritos'),
       ),
       body: favorites.isEmpty

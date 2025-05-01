@@ -1,6 +1,7 @@
 class Event {
   final int id;
   final String name;
+  final String description;
   final DateTime date;
   final double lat;
   final double long;
@@ -11,6 +12,7 @@ class Event {
   Event({
     required this.id,
     required this.name,
+    required this.description,
     required this.date,
     required this.lat,
     required this.long,
@@ -23,6 +25,7 @@ class Event {
     return Event(
       id: map['id'] as int,
       name: map['name'] as String,
+      description: map['description'] as String,
       date: DateTime.parse(map['date'] as String),
       lat: map['lat'] as double,
       long: map['long'] as double,
@@ -36,6 +39,7 @@ class Event {
     return {
       'id': id,
       'name': name,
+      'description': description,
       'date': date.toIso8601String(),
       'lat': lat.toString(),
       'long': long.toString(),
@@ -47,6 +51,7 @@ class Event {
   Event copyWith({
     int? id,
     String? name,
+    String? description,
     DateTime? date,
     double? lat,
     double? long,
@@ -56,6 +61,7 @@ class Event {
     return Event(
       id: id ?? this.id,
       name: name ?? this.name,
+      description: description ?? this.description,
       date: date ?? this.date,
       lat: lat ?? this.lat,
       long: long ?? this.long,

@@ -1,3 +1,4 @@
+import 'package:creeartelo_challenge/global/event_colors.dart';
 import 'package:creeartelo_challenge/view_models/event_view_model.dart';
 import 'package:creeartelo_challenge/views/favorites_list_view.dart';
 import 'package:creeartelo_challenge/widgets/event_card.dart';
@@ -12,7 +13,9 @@ class EventListView extends StatelessWidget {
     final viewModel = Provider.of<EventViewModel>(context);
 
     return Scaffold(
+      backgroundColor: EventColors.roseWhite,
       appBar: AppBar(
+        backgroundColor: EventColors.roseWhite,
         title: const Text('Eventos App'),
         actions: [
           IconButton(

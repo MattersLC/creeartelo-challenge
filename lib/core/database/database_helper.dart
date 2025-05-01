@@ -26,6 +26,7 @@ class DatabaseHelper {
       CREATE TABLE events (
         id INTEGER PRIMARY KEY,
         name TEXT NOT NULL,
+        description TEXT NOT NULL,
         date TEXT NOT NULL,
         lat REAL NOT NULL,
         long REAL NOT NULL,
